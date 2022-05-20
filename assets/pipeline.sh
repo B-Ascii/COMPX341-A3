@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [$# -eq 0]
+then
+	echo "Need to supply an argument for commit message"
+	exit
+fi
+
 npm install
 if npm run build; 
 then
@@ -11,7 +17,7 @@ fi
 
 git add --all
 
-git commit -m "COMPX341-22A-A3 Commiting from CI/CD Pipeline"
+git commit -m '$1'
 
 git push
 
