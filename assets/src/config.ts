@@ -1,3 +1,4 @@
+//Bedir 1539000
 //
 export default {
   apiGateway: {
